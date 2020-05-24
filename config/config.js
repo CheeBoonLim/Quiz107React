@@ -72,10 +72,10 @@ export default defineConfig({
               ],
             },
             {
-              name: 'list.table-list',
+              name: 'list.product-list',
               icon: 'table',
-              path: '/list',
-              component: './ListTableList',
+              path: '/product-list',
+              component: './ProductList',
             },
             {
               component: './404',

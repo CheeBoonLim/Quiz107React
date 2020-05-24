@@ -1,62 +1,92 @@
 import React from 'react';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
-import { Card, Typography, Alert } from 'antd';
+import { Card, Typography } from 'antd';
 import styles from './Welcome.less';
 
-const CodePreview = ({ children }) => (
-  <pre className={styles.pre}>
-    <code>
-      <Typography.Text copyable>{children}</Typography.Text>
-    </code>
-  </pre>
+const { Paragraph, Text } = Typography;
+const CardParagraph = ({ children }) => (
+    <pre className={styles.pre}>
+        <code>
+            <Typography.Text>{children}</Typography.Text>
+        </code>
+    </pre>
 );
 
 export default () => (
-  <PageHeaderWrapper>
-    <Card>
-      <Alert
-        message="umi ui 现已发布，点击右下角 umi 图标即可使用"
-        type="success"
-        showIcon
-        banner
-        style={{
-          margin: -12,
-          marginBottom: 24,
-        }}
-      />
-      <Typography.Text strong>
-        <a target="_blank" rel="noopener noreferrer" href="https://pro.ant.design/docs/block">
-          基于 block 开发，快速构建标准页面
-        </a>
-      </Typography.Text>
-      <CodePreview> npm run ui</CodePreview>
-      <Typography.Text
-        strong
-        style={{
-          marginBottom: 12,
-        }}
-      >
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://pro.ant.design/docs/available-script#npm-run-fetchblocks"
-        >
-          获取全部区块
-        </a>
-      </Typography.Text>
-      <CodePreview> npm run fetch:blocks</CodePreview>
-    </Card>
-    <p
-      style={{
-        textAlign: 'center',
-        marginTop: 24,
-      }}
-    >
-      Want to add more pages? Please refer to{' '}
-      <a href="https://pro.ant.design/docs/block-cn" target="_blank" rel="noopener noreferrer">
-        use block
-      </a>
-      。
-    </p>
-  </PageHeaderWrapper>
+    <PageHeaderWrapper>
+        <Card title="CHEE BOON LIM"
+            extra={
+                <div>
+                    <a href="https://www.linkedin.com/in/cheeboon-lim/">LinkedIn </a>
+                    <Text>|</Text>
+                    <a href="https://github.com/CheeBoonLim/"> GitHub </a>
+                    <Text>|</Text>
+                    <a href="http://programmingcode.net/"> Blog</a>
+                </div>
+            }>
+
+            <Typography.Text strong style={{ color: '#06bda4', fontSize: '20px' }}>
+                Introduction
+            </Typography.Text>
+            <CardParagraph>
+                <Paragraph>
+                    A statistic professional is seeking to make a mark in contributing to the Software industry.
+                </Paragraph>
+                <Paragraph>
+                    Worked as a data analyst for more than five years in the market research company.
+                </Paragraph>
+                <Paragraph>
+                    Find my enthusiasm for programming and have worked as a <Text strong>contract developer</Text> for more than 6 months.
+                </Paragraph>
+                <Paragraph>
+                    I would like to take on challenges in any new cutting-edge technologies and be competent in software development.
+                </Paragraph>
+            </CardParagraph>
+
+            <Typography.Text strong style={{ color: '#06bda4', fontSize: '20px' }}>
+                Skills & Experience In
+            </Typography.Text>
+            <CardParagraph>
+                <Text strong>WEB TECHNOLOGIES</Text>
+                <ul>
+                    <li>React</li>
+                    <li>ASP.Net</li>
+                    <li>MVC</li>
+                    <li>Bootstrap 4</li>
+                    <li>Semantic UI</li>
+                    <li>REST</li>
+                    <li>HTML5, Javascript, jQuery</li>
+                </ul>
+                <Text strong>.NET FRAMEWORK</Text>
+                <ul>
+                    <li>C#</li>
+                    <li>.NET Core</li>
+                    <li>LINQ</li>
+                    <li>Entity Framework</li>
+                    <li>Java</li>
+                </ul>
+                <Text strong>DATABASES</Text>
+                <ul>
+                    <li>Microsoft SQL Server</li>
+                    <li>MongoDB</li>
+                    <li>Firebird</li>
+                </ul>
+                <Text strong>TOOLS/LIBRARIES</Text>
+                <ul>
+                    <li>Visual Studio 2017</li>
+                    <li>Git</li>
+                    <li>Heroku</li>
+                    <li>Postman</li>
+                    <li>Jira</li>
+                </ul>
+                <Text strong>OTHERS</Text>
+                <ul>
+                    <li>Blockchain</li>
+                    <li>Crypto-Economy</li>
+                    <li>Web3</li>
+                    <li>Power BI</li>
+                </ul>
+            </CardParagraph>
+        </Card>
+    </PageHeaderWrapper>
 );
